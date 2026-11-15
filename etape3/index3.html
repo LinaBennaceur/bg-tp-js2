@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="table_container">
+        <table id="table_persons">
+            <tr>
+                <th class="col_num">N</th>
+                <th class="col_S">Nom</th>
+                <th class="col_S">Prenom</th>
+                <th class="col_num">Points</th>
+                <th class="col_chkbox">Select</th>
+            </tr>
+            <tr>
+                <td class="col_num">1</td>
+                <td class="col_S">Nom1</td>
+                <td class="col_S">Prnom1</td>
+                <td class="col_num">5</td>
+                <td class="col_chkbox"><input type="checkbox"/></td>
+            </tr>
+            <tr>
+                <td class="col_num">2</td>
+                <td class="col_S">Nom2</td>
+                <td class="col_S">Prnom2</td>
+                <td class="col_num">10</td>
+                <td class="col_chkbox"><input type="checkbox"/></td>
+            </tr>
+            <tr>
+                <td class="col_num">3</td>
+                <td class="col_S">Nom3</td>
+                <td class="col_S">Prnom3</td>
+                <td class="col_num">15</td>
+                <td class="col_chkbox"><input type="checkbox"/></td>
+            </tr>
+        </table>
+        <button onclick="doInsertRowTable(99, 'nom', 'prenom', 10)">Ajouter</button>
+        <button onclick="consoleTableau()">Console Tableau</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
