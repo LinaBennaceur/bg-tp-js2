@@ -6,6 +6,7 @@
 </head>
 <body>
     <div id="table_container">
+	<!-- id : identifiant utilisé par JS pour retrouver l'élément avec getElementById (slides 61 à 64) -->
         <table id="table_persons">
             <tr>
                 <th class="col_num">N</th>
@@ -36,9 +37,11 @@
                 <td class="col_chkbox"><input type="checkbox"/></td>
             </tr>
         </table>
+		<!-- onclick : événement "au clic" qui appelle une fonction JS (slides 22 et 129 à 135) -->
         <button onclick="doInsertRowTable(99, 'nom', 'prenom', 10)">Ajouter</button>
         <button onclick="consoleTableau()">Console Tableau</button>
     </div>
+	<!-- Script JS externe (slide 24) placé à la fin du body, pour que le DOM soit chargé avant son exécution (slides 23, 26 et 27) -->
     <script src="script3.js"></script>
 </body>
 </html>
