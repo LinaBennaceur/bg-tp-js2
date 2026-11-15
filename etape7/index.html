@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<head>
+    <title>CRUD-Persons</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="table_container">
+        <!-- Champs de saisie : leurs id permettent à JS de les retrouver avec getElementById (slides 61 à 64) -->
+        <div id="form_container">
+            <div class="form_group">
+                <label class="form_label">Nom:</label>
+                <input type="text" id="form_nom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Prénom:</label>
+                <input type="text" id="form_prenom" class="form_field"/>
+            </div>
+            <div class="form_group">
+                <label class="form_label">Points:</label>
+                <input type="number" id="form_points" class="form_field"/>
+            </div>
+            <!-- onclick : événement "au clic" qui appelle une fonction JS (slides 22 et 129 à 135) -->
+            <button class="btn-add" onclick="doNewData()">Ajouter</button>
+        </div>
+        <!-- AJOUT : barre d'outils -->
+        <div id="toolbar">
+            <!-- oninput : événement "à chaque frappe", appelle doSearch() pour filtrer le tableau (fonctionnalité 2) -->
+            <input type="text" id="search" class="form_field" placeholder="Rechercher (nom ou prénom)..." oninput="doSearch()"/>
+            <!-- onclick : appelle deleteSelected() pour supprimer les lignes cochées (fonctionnalité 1) -->
+            <button onclick="deleteSelected()">Supprimer la sélection</button>
+        </div>
+        <!-- id : identifiant utilisé par JS pour retrouver l'élément avec getElementById (slides 61 à 64) -->
+        <table id="table_persons">
+            <tr>
+                <th class="col_num">N°</th>
+                <th class="col_S">Nom</th>
+                <th class="col_S">Prénom</th>
+                <th class="col_num">Points</th>
+                <th class="col_chkbox">Select</th>
+            </tr>
+        </table>
+        <!-- Espace résumé : les p1 et p3 sont modifiés par JS avec getElementById + innerText (slides 61 à 64 et 91) -->
+        <div id="container_summary">
+            <p id="p1">0 ligne(s)</p>
+            <p id="p2"></p>
+            <p id="p3">Total point(s)= 0</p>
+        </div>
+        <button onclick="consoleTableau()">Console Tableau</button>
+    </div>
+    <!-- Script JS externe (slide 24) placé à la fin du body, pour que le DOM soit chargé avant son exécution (slides 23, 26 et 27) -->
+    <script src="script.js"></script>
+</body>
+</html>
