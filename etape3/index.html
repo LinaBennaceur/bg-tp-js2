@@ -6,6 +6,7 @@
 </head>
 <body>
     <div id="table_container">
+       // identifiant utilisé par JS pour retrouver l'élément avec getElementById (slides 61 à 64)
         <table id="table_persons">
             <tr>
                 <th class="col_num">N</th>
@@ -39,6 +40,7 @@
         <button onclick="doInsertRowTable(99, 'nom', 'prenom', 10)">Ajouter</button>
         <button onclick="consoleTableau()">Console Tableau</button>
     </div>
+    //Script JS externe (slide 24) placé à la fin du body, pour que le DOM soit chargé avant son exécution (slides 23, 26 et 27)
     <script src="script.js"></script>
 </body>
 </html>
